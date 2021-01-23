@@ -16,3 +16,4 @@ Route::get('/', function () {
 });
 
 Route::get('/CreateArticle', 'PagesController@showViewCreateArticle');
+Route::get('articles', 'ArticlesController@index');
