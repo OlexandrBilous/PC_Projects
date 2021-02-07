@@ -19,7 +19,7 @@ class BlogCategoriesTableSeeder extends Seeder
         $categories[]=[
 
             'title' =>$cName,
-            'slug'  =>Str::of($cName)->slug(),
+            'slug'  =>Str::slug($cName),
              'parent_id'=> 0,
 
         ];
@@ -29,7 +29,7 @@ class BlogCategoriesTableSeeder extends Seeder
           $parentId= ($i > 4) ? rand( 1, 4 ) :1;
         $categories[]=[
             'title' =>$cName,
-            'slug'  =>Str::of($cName)->slug(),
+            'slug'  =>Str::slug($cName),
              'parent_id'=> $parentId,
 
 
